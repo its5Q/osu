@@ -462,7 +462,7 @@ namespace osu.Game.Rulesets.Catch.UI
                     float originalX = droppedObjectTarget.ToSpaceOfOtherDrawable(d.DrawPosition, caughtObjectContainer).X * caughtObjectContainer.Scale.X;
                     d.MoveToY(d.Y - 50, 250, Easing.OutSine).Then().MoveToY(d.Y + 50, 500, Easing.InSine);
                     d.MoveToX(d.X + originalX * 6, 1000);
-                    d.FadeOut(750);
+                    d.FadeOut(1000);
                     break;
             }
 

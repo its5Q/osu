@@ -28,6 +28,11 @@ namespace osu.Game.Rulesets.Catch.UI
             set => catcherContainer.Child = catcher = value;
         }
 
+        /// <summary>
+        /// Dashing trail generation interval.
+        /// </summary>
+        private const double generation_interval = 16.67;
+
         private readonly Container<Catcher> catcherContainer;
 
         private readonly CatchComboDisplay comboDisplay;
@@ -110,9 +115,7 @@ namespace osu.Game.Rulesets.Catch.UI
 
             if (Catcher.Dashing || Catcher.HyperDashing)
             {
-                double generationInterval = Catcher.HyperDashing ? 25 : 50;
-
-                if (Time.Current - catcherTrails.LastDashTrailTime >= generationInterval)
+                if (Time.Current - catcherTrails.LastDashTrailTime >= generation_interval)
                     displayCatcherTrail(Catcher.HyperDashing ? CatcherTrailAnimation.HyperDashing : CatcherTrailAnimation.Dashing);
             }
 

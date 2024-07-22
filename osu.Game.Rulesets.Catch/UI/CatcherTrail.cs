@@ -52,7 +52,7 @@ namespace osu.Game.Rulesets.Catch.UI
             {
                 case CatcherTrailAnimation.Dashing:
                 case CatcherTrailAnimation.HyperDashing:
-                    this.FadeTo(0.4f).FadeOut(800, Easing.OutQuint);
+                    this.FadeTo(0.4f).FadeOut(500, Easing.OutQuint);
                     break;
 
                 case CatcherTrailAnimation.HyperDashAfterImage:
